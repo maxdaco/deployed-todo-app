@@ -32,14 +32,14 @@ console.error(err)
   }
 }
 
-const editData = async (e) => {
+const editData = async(e) => {
   e.preventdefault()
 
   try{
     const response = await fetch(`${process.env.REACT_APP_SERVERURL}/todos/${task.id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json'},
-      body :JSON.stringify (data)
+      body :JSON.stringify(data)
      
     })
 
